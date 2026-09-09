@@ -1,13 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derrickson Ymbon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Your Name's personal site — CV, projects, and notes">
+  <!-- <link rel="shortcut icon" href="assets/icons/favicon.ico"> -->
+
+  <!-- Optional: MathJax for notes that include math notation. Uncomment if needed. -->
+  <!-- <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 </head>
 <body>
-    <h1>
-        My page
-    </h1>
+  <div class="container">
+
+    <div class="header">
+      <div class="name-block">
+        <h1>Your Name</h1>
+        <p class="tagline">One-line title — e.g. role, field, or affiliation</p>
+        <p class="contact">
+          <a href="mailto:you@example.com">you@example.com</a> ·
+          <a href="https://github.com/yourhandle" target="_blank" rel="noopener">github</a> ·
+          <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">linkedin</a>
+        </p>
+      </div>
+
+      <nav>
+        <a class="nav-link active" data-target="home">home</a>
+        <a class="nav-link" data-target="cv">cv</a>
+        <a class="nav-link" data-target="projects">projects</a>
+        <a class="nav-link" data-target="notes">notes</a>
+
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <div class="content">
+
+      <!-- HOME -->
+      <div id="home">
+        <p>I'm [a short line about who you are and what you do — e.g. "a software engineer working on distributed systems" or "a graduate student studying X"].</p>
+        <p>Currently [what you're doing right now — a role, a program, a focus area]. Previously, [something about your background — school, past job, or project].</p>
+        <p>I'm interested in [two or three things you care about, comma separated].</p>
+        <p>You can find my <a href="#cv" class="nav-jump" data-target="cv">CV here</a>, or take a look at my <a href="#projects" class="nav-jump" data-target="projects">projects</a> and <a href="#notes" class="nav-jump" data-target="notes">notes</a>.</p>
+      </div>
+
+      <!-- CV -->
+      <div id="cv">
+        <p class="cv-download"><a href="cv.pdf" target="_blank">Download full CV (PDF) →</a></p>
+
+        <div class="cv-block">
+          <h3>Education</h3>
+          <div class="cv-row">
+            <div class="cv-what">
+              <div class="entry-title">Degree, Field</div>
+              <div class="cv-org">Institution Name</div>
+            </div>
+            <div class="cv-when">20XX – 20XX</div>
+          </div>
+          <div class="cv-row">
+            <div class="cv-what">
+              <div class="entry-title">Degree, Field</div>
+              <div class="cv-org">Institution Name</div>
+            </div>
+            <div class="cv-when">20XX – 20XX</div>
+          </div>
+        </div>
+
+        <div class="cv-block">
+          <h3>Experience</h3>
+          <div class="cv-row">
+            <div class="cv-what">
+              <div class="entry-title">Role Title</div>
+              <div class="cv-org">Company / Organization — one line on what you did</div>
+            </div>
+            <div class="cv-when">Mon 20XX – Mon 20XX</div>
+          </div>
+          <div class="cv-row">
+            <div class="cv-what">
+              <div class="entry-title">Role Title</div>
+              <div class="cv-org">Company / Organization — one line on what you did</div>
+            </div>
+            <div class="cv-when">Mon 20XX – Mon 20XX</div>
+          </div>
+        </div>
+
+        <div class="cv-block">
+          <h3>Skills</h3>
+          <div class="skills-line">
+            <span class="skill-tag">Skill one</span>
+            <span class="skill-tag">Skill two</span>
+            <span class="skill-tag">Skill three</span>
+            <span class="skill-tag">Skill four</span>
+            <span class="skill-tag">Skill five</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div id="projects">
+        <ul class="entry-list">
+          <li>
+            <div class="entry-title">Project One</div>
+            <div class="entry-meta">2026 · Python, React</div>
+            <p class="entry-desc">One or two sentences on what this project is, what problem it solves, and any notable result or scale.</p>
+            <div class="entry-links">
+              <a href="#" target="_blank">code</a>
+              <a href="#" target="_blank">demo</a>
+            </div>
+          </li>
+          <li>
+            <div class="entry-title">Project Two</div>
+            <div class="entry-meta">2025 · TypeScript</div>
+            <p class="entry-desc">One or two sentences on what this project is, what problem it solves, and any notable result or scale.</p>
+            <div class="entry-links">
+              <a href="#" target="_blank">code</a>
+            </div>
+          </li>
+          <li>
+            <div class="entry-title">Project Three</div>
+            <div class="entry-meta">2024 · Side project</div>
+            <p class="entry-desc">One or two sentences on what this project is, what problem it solves, and any notable result or scale.</p>
+            <div class="entry-links">
+              <a href="#" target="_blank">writeup</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- NOTES -->
+      <div id="notes">
+        <ul class="entry-list">
+          <li>
+            <div class="entry-title">Note title one</div>
+            <div class="entry-meta">Jan 2026</div>
+            <p class="entry-desc">A short summary of what this note covers, so a reader can decide if it's relevant before opening it.</p>
+            <div class="entry-links">
+              <a href="#" target="_blank">read</a>
+            </div>
+          </li>
+          <li>
+            <div class="entry-title">Note title two</div>
+            <div class="entry-meta">Nov 2025</div>
+            <p class="entry-desc">A short summary of what this note covers, so a reader can decide if it's relevant before opening it.</p>
+            <div class="entry-links">
+              <a href="#" target="_blank">read</a>
+            </div>
+          </li>
+          <li>
+            <div class="entry-title">Note title three</div>
+            <div class="entry-meta">Aug 2025</div>
+            <p class="entry-desc">A short summary of what this note covers, so a reader can decide if it's relevant before opening it.</p>
+            <div class="entry-links">
+              <a href="#" target="_blank">read</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 Your Name</p>
+    </div>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
